@@ -13,7 +13,7 @@ def format_footballer(footballer):
     }
 
 # GET ALL FOOTBALLERS AND ADD FOOTBALLER
-@app.route("/", methods=["GET", "POST"])
+@app.route("/footballers", methods=["GET", "POST"])
 def get_footballers():
     form = AddFootballerForm()
     if request.method == "POST":
@@ -21,7 +21,7 @@ def get_footballers():
             footballer = FootballPlayer(form.name.data, form.age.data, form.position.data, form.club.data, form.shirt_number.data)
             db.session.add(footballer)
             db.session.commit()
-            return redirect('/')
+            return redirect('/footballers')
         
     else:
         footballers = FootballPlayer.query.all()
