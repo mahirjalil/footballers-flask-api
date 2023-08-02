@@ -1,4 +1,4 @@
-# Footballers-api-flask
+# Footballers-flask-api
 
 This project contains an API that was created using the Flask framework for Python.
 The API allows you to manage a postgreSQL database using ElephantSQL, that contains data on football players.
