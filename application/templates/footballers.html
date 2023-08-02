@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="title">
+    <h1>Football Players</h1>
+</div>
+
+<form method="POST" action"">
+    {{form.hidden_tag()}}
+    <fieldset>
+        <legend>Add a Football Player</legend>
+        <div>
+            {{form.name.label}}
+            {{form.name}}
+        </div>
+        <div>
+            {{form.age.label}}
+            {{form.age}}
+        </div>
+        <div>
+            {{form.position.label}}
+            {{form.position}}
+        </div>
+        <div>
+            {{form.club.label}}
+            {{form.club}}
+        </div>
+        <div>
+            {{form.shirt_number.label}}
+            {{form.shirt_number}}
+        </div>
+    </fieldset>
+    <div>
+        {{form.submit}}
+    </div>
+</form>
+
+<div class="player">
+    {% for footballer in footballers %}
+        <div class="player-card">
+            <h1>{{footballer.name}}</h1>
+            <p>Age: {{footballer.age}}</p>
+            <p>Position: {{footballer.position}}</p>
+            <p>Club: {{footballer.club}}</p>
+            <p>Shirt number: {{footballer.shirt_number}}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

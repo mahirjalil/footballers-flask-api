@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="title">
+    <h1>Football Players</h1>
+</div>
+<div class="player">
+    <div class="player-card">
+        <h1>{{footballer.name}}</h1>
+        <p>Age: {{footballer.age}}</p>
+        <p>Position: {{footballer.position}}</p>
+        <p>Club: {{footballer.club}}</p>
+        <p>Shirt number: {{footballer.shirt_number}}</p>
+    </div>
+</div>
+{% endblock %}
