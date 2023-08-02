@@ -3,6 +3,8 @@
 This project contains an API that was created using the Flask framework for Python.
 The API allows you to manage a postgreSQL database using ElephantSQL, that contains data on football players.
 
+[Deployed version](https://footballers-flask-api.onrender.com/footballers)
+
 ## Installation
 
 Create a virtual environment using pipenv:
